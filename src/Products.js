@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(3),
     textAlign: "center",
-    height: "260px",
+    height: "280px",
     color: theme.palette.text.secondary,
     cursor: "pointer",
     "&:hover": {
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function FullWidthGrid() {
+export default function Products() {
   const classes = useStyles();
 
   return (
@@ -99,7 +99,7 @@ export default function FullWidthGrid() {
             <ItemPlate
               price={540}
               item={6}
-              name={"Air-Jordan-1-Retro-Chicago"}
+              name={"Air Jordan 1 Retro Chicago"}
               src={
                 "https://stockx-360.imgix.net//Air-Jordan-1-Retro-Chicago-1994/Images/Air-Jordan-1-Retro-Chicago-1994/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1546586711&w=1000"
               }
