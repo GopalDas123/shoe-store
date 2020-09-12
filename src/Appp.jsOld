@@ -1,0 +1,125 @@
+import React from "react";
+import "./App.css";
+import Itemm from "./Item";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Outlet,
+  useParams,
+} from "react-router-dom";
+
+export default function App() {
+  return (
+    <Router>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/launch">Products</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="launch" element={<Launch />}>
+          <Route path="/" element={<LaunchIndex />} />
+          <Route path=":slug" element={<LaunchShoe />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+        <Itemm />
+      </Routes>
+    </Router>
+  );
+}
+
+function NotFound() {
+  return (
+    <div>
+      <h1>Not found!</h1>
+      <p>Sorry your page was not found!</p>
+    </div>
+  );
+}
+
+function Home() {
+  return (
+    <div>
+      <h1>Welcome Home!</h1>
+    </div>
+  );
+}
+
+function Launch() {
+  return (
+    <div>
+      <h1>Products</h1>
+
+      <Outlet />
+    </div>
+  );
+}
+
+function LaunchIndex() {
+  return (
+    <ul className="products">
+      {Object.entries(shoes).map(([slug, { name, img }]) => (
+        <li className="items" key={slug}>
+          <Link to={`/launch/${slug}`}>
+            <p>{name}</p>
+            <img src={img} alt={name} />
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function LaunchShoe() {
+  const { slug } = useParams();
+  const shoe = shoes[slug];
+
+  if (!shoe) {
+    return <h2>Not Found!</h2>;
+  }
+
+  const { name, img } = shoe;
+
+  return (
+    <div>
+      <h2>{name}</h2>
+      <img src={img} alt={name} />
+    </div>
+  );
+}
+
+const shoes = {
+  "Air-Jordan-1-Retro-HP-Green": {
+    name: "Air Jordan 1 Retro HP Green",
+    img:
+      "https://stockx-360.imgix.net//Air-Jordan-1-Retro-High-Pine-Green/Images/Air-Jordan-1-Retro-High-Pine-Green/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538777452&w=1000",
+  },
+  "air-Jordan-1-Retro-High": {
+    name: "Air Jordan 1 Retro",
+    img:
+      "https://stockx-360.imgix.net//Air-Jordan-1-Retro-High-Bio-Hack/Images/Air-Jordan-1-Retro-High-Bio-Hack/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1599068019&w=1000",
+  },
+  "Air-Jordan-5-Retro-SE": {
+    name: "Air Jordan 5 Retro",
+    img:
+      "https://stockx.imgix.net/Air-Jordan-5-Retro-SE-Oregon.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1593581799&w=1000",
+  },
+  "Air-Jordan-1-Retro-High-Yellow": {
+    name: "Air Jordan 1 RH Yellow",
+    img:
+      "https://stockx-360.imgix.net//Air-Jordan-1-Retro-High-Yellow-Ochre/Images/Air-Jordan-1-Retro-High-Yellow-Ochre/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000",
+  },
+  "Air-Jordan-1-Retro-H-Fearless": {
+    name: "Air Jordan 1 Retro H Fearless",
+    img:
+      "https://stockx-360.imgix.net//Air-Jordan-1-Retro-High-Fearless-UNC-Chicago/Images/Air-Jordan-1-Retro-High-Fearless-UNC-Chicago/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1573502731&w=1000",
+  },
+  "Air-Jordan-1-Retro-Chicago": {
+    name: "Air Jordan 1 R Chicago",
+    img:
+      "https://stockx-360.imgix.net//Air-Jordan-1-Retro-Chicago-1994/Images/Air-Jordan-1-Retro-Chicago-1994/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1546586711&w=1000",
+  },
+};
