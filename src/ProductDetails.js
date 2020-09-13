@@ -2,11 +2,10 @@ import React from "react";
 // import Products from "./Products";
 import "./proDetail.css";
 
-// import {Link} from 'react-router-dom';
-
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+
 // import Basket from './Basket';
 
 const useStyles = makeStyles((theme) => ({

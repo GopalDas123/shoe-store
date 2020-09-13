@@ -2,7 +2,7 @@
     height: 70%;
     width: 90%;
     margin: auto;
-    /* background-color: black; */
+    min-width: 350px,
 }
 .title{
     padding: 0 0px;
