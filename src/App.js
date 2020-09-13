@@ -4,21 +4,24 @@ import Products from "./Products";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import { ProductDetails } from "./ProductDetails";
+import Basket from './Basket';
 function App() {
   return (
     <Router>
       <nav>
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>
+        <Link to="/basket">Basket</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/basket" element={<Basket />} />
         <Route
           path="/products/product1"
           element={
             <ProductDetails
-              price={190}
+              price={190} 
               item={1}
               name={"Air Jordan 1 Retro HP Green"}
               src={
@@ -85,7 +88,7 @@ function App() {
             <ProductDetails
               price={540}
               item={6}
-              name={"Air-Jordan-1-Retro-Chicago"}
+              name={"Air Jordan 1 Retro Chicago"}
               src={
                 "https://stockx-360.imgix.net//Air-Jordan-1-Retro-Chicago-1994/Images/Air-Jordan-1-Retro-Chicago-1994/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1546586711&w=1000"
               }

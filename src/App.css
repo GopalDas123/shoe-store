@@ -8,12 +8,11 @@
     padding: 0 0px;
     margin: 0 0px;
     color: rgb(31, 31, 31);
+    line-height: 30px;
 }
 .price{
     padding: 0 0;
-    margin: -10px auto;
+    margin: -30px -40px;
     color: rgb(215, 0, 0);
-    
-    
-
+    font-family: 'Lato', sans-serif;    
 }

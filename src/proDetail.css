@@ -1,11 +1,14 @@
 .main{
     margin: auto;
     align-items: center;
+    display: flex;
+    flex-direction: row;
 }
 .shoe{
+    float: left;
     width: 50%;
     height: 10%;
-    margin: auto;
+    /* margin: auto; */
     border-radius: 30%;
 }
 /* .shoe:hover{
@@ -13,19 +16,50 @@
     transition: "0.2s ease-in",
 } */
 .name{
-    font-size: 40px;
+    /* font-size: 25px; */
     font-weight: bold;
-    font-family: 'Baloo Tammudu 2', cursive;
-   display: flex;
-   justify-content: space-around;
-   margin: 10px 0 0 0;
+    font-family: 'Bebas Neue', cursive;
+   /* display: flex; */
+   width: 100%;
+   line-height: 30px;
+   text-align: center;
+   /* justify-content: space-around; */
+   margin: -10px 0 0 0;
    padding: 0 0;
+   /* background-color: red; */
    
 
 }
 .price{
-    margin: -25px 0;
+    margin: 25px 0 120px 0;
     padding: 0 0;
+    text-align: center;
     display: flex;
+    font-family: 'Lato', sans-serif;
+    flex-direction: column;
    justify-content: space-around;
+}
+.cartDetail{
+    padding: 18px 18px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    line-break: inherit;
+
+}
+.basket-btn{
+    height: 50px;
+    width: 220px;
+    margin: 20px auto;
+    border: none;
+    background-color: brown;
+    color: white;
+    font-size:28px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', cursive;
+
+}
+.basket-btn:hover{
+    transition:0.7s ease;
+    box-shadow: rgb(237, 160, 160) 0 1px 10px;
 }

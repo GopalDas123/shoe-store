@@ -1,11 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Baloo Tammudu 2', cursive;
+  font-family: 'Lato', sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Lato', sans-serif;
 }
 
 nav {
