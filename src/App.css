@@ -15,7 +15,7 @@ nav {
   height: 70%;
   width: 90%;
   margin: auto;
-  min-width: 350px;
+  /* min-width: 200px; */
 }
 .title {
   padding: 0 0px;
