@@ -5,13 +5,14 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import { ProductDetails } from "./ProductDetails";
 import Basket from './Basket';
+import BottomNav from './BottomNav';
 function App() {
   return (
     <Router>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/basket">Basket</Link>
+        <Link className="con" to="/">Home</Link>
+        <Link className="con" to="/products">Products</Link>
+        <Link className="con" to="/basket">Basket</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -97,6 +98,7 @@ function App() {
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <BottomNav/>
     </Router>
   );
 }

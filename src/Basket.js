@@ -4,16 +4,15 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Success from "./Success";
-
 const useStyles = makeStyles((theme) => ({
   root: {
+    display:'all',
     flexGrow: 1,
     padding: "20px",
   },
   paper: {
     padding: theme.spacing(2),
     textAlign: "left",
-    minWidth: "350px",
     color: theme.palette.text.secondary,
   },
 }));

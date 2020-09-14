@@ -11,8 +11,6 @@ function Alert(props) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    
-    minWidth: "350px",
     width: '100%',
     '& > * + *': {
       marginTop: theme.spacing(2),
@@ -43,7 +41,7 @@ export default function Success() {
       </Button>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success">
-          Congo!! Payment Successfull...
+          Purchace Successfull...
         </Alert>
       </Snackbar>
     </div>
