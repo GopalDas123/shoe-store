@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(3),
     textAlign: "center",
-    height: "230px",
+    height: "280px",
     color: theme.palette.text.secondary,
     cursor: "pointer",
     "&:hover": {
